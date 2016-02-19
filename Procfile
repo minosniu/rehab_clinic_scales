@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/try-guestbook.jar clojure.main -m try-guestbook.core
+web: java $JVM_OPTS -cp target/rehab-clinic-scales.jar clojure.main -m rehab-clinic-scales.core

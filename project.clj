@@ -1,4 +1,4 @@
-(defproject try-guestbook "0.1.0-SNAPSHOT"
+(defproject rehab-clinic-scales "0.1.0-SNAPSHOT"
 
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
@@ -42,7 +42,7 @@
   :source-paths ["src/clj" "src/cljc"]
   :resource-paths ["resources" "target/cljsbuild"]
 
-  :main try-guestbook.core
+  :main rehab-clinic-scales.core
 
   :plugins [[lein-environ "1.0.1"]
             [lein-cljsbuild "1.1.1"]]
@@ -72,7 +72,7 @@
                   {:externs-validation :off :non-standard-jsdoc :off}}}}} 
              
              :aot :all
-             :uberjar-name "try-guestbook.jar"
+             :uberjar-name "rehab-clinic-scales.jar"
              :source-paths ["env/prod/clj"]
              :resource-paths ["env/prod/resources"]}
    :dev           [:project/dev :profiles/dev]
@@ -90,7 +90,7 @@
                     {:app
                      {:source-paths ["env/dev/cljs"]
                       :compiler
-                      {:main "try-guestbook.app"
+                      {:main "rehab-clinic-scales.app"
                        :asset-path "/js/out"
                        :optimizations :none
                        :source-map true}}
@@ -98,7 +98,7 @@
                      {:source-paths ["src/cljc" "src/cljs" "test/cljs"]
                       :compiler
                       {:output-to "target/test.js"
-                       :main "try-guestbook.doo-runner"
+                       :main "rehab-clinic-scales.doo-runner"
                        :optimizations :whitespace
                        :pretty-print true}}}} 
                   
@@ -108,7 +108,7 @@
                    :nrepl-port 7002
                    :nrepl-middleware ["cemerick.piggieback/wrap-cljs-repl"]
                    :css-dirs ["resources/public/css"]
-                   :ring-handler try-guestbook.handler/app}
+                   :ring-handler rehab-clinic-scales.handler/app}
                   :doo {:build "test"}
                   :source-paths ["env/dev/clj" "test/clj"]
                   :resource-paths ["env/dev/resources"]
